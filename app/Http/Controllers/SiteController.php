@@ -8,7 +8,7 @@ class SiteController extends Controller
 {
     public function index()
     {
-        $name = 'Gustavo';
+        $name = 'Gustavo Goularte Correia';
         $habits = ['ler,', 'correr', 'estudar'];
         return view('index', [
             'name' => $name,
