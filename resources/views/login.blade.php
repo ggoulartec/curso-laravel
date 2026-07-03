@@ -20,7 +20,7 @@
 
         <button
           type="submit"
-          class="bg-white p-2 border-2"
+          class="bg-white p-2 border-2 cursor-pointer"
         >
           Entrar
         </button>
