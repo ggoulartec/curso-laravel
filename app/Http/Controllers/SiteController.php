@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class SiteController extends Controller
 {
@@ -18,9 +19,14 @@ class SiteController extends Controller
         return view('dashboard');
     }
 
+    public function login()
+    {
+        return view('login');
+    }
+
     public function admin()
     {
-        $users = \App\Models\User::all();
+        $users = User::all();
         return view('admin', compact('users'));
     }
 }

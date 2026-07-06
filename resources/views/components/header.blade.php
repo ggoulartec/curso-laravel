@@ -13,6 +13,7 @@
       <a href="{{ route('site.admin') }}" class="text-sm font-semibold text-stone-600 hover:text-stone-900 transition-all">
         Admin
       </a>
+      <p class="text-sm font-semibold text-stone-600 hover:text-stone-900 transition-all">{{ auth()->user()->name }}</p>
       <form action="{{ route('auth.logout') }}" method="POST" class="m-0">
         @csrf
         <button type="submit" class="bg-white hover:bg-stone-55 p-2 border-2 cursor-pointer rounded-lg text-sm font-semibold text-stone-750 transition-all">
@@ -22,7 +23,7 @@
     @endauth
 
     @guest
-      <a href="{{ route('login') }}" class="bg-white hover:bg-stone-55 p-2 border-2 rounded-lg text-sm font-semibold text-stone-750 transition-all">
+      <a href="{{ route('site.login') }}" class="bg-white hover:bg-stone-55 p-2 border-2 rounded-lg text-sm font-semibold text-stone-750 transition-all">
         Entrar
       </a>
     @endguest
