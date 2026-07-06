@@ -3,5 +3,11 @@
     <h1>Dashboard</h1>
   </main>
 
-  <p>Bem vindo(a)! {{ auth()->user()->name }}</p>
+  @if (auth()->check())
+    <p>Bem vindo(a)! {{ auth()->user()->name }}</p>
+
+    <a href="{{ route('auth.logout') }}">Sair</a>
+  @else
+    <p>Você não tem permissão para acessar o dashboard</p>
+  @endif
 </x-layout>
