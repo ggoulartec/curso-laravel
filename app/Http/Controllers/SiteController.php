@@ -17,4 +17,10 @@ class SiteController extends Controller
     {
         return view('dashboard');
     }
+
+    public function admin()
+    {
+        $users = \App\Models\User::all();
+        return view('admin', compact('users'));
+    }
 }
